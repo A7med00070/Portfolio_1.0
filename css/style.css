@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+body{
+    height: 100vh;
+    /* overflow-x: hidden; */
+    display: block;
+}
+.Header-section{
+    background:linear-gradient(to bottom,#0048ff84, #fff);
+    color: #fff;
+    min-height:100vh ;
+}
+
+/* *********************************************************** */
+/* ***************** Start of the Nav Bar ******************** */
+
+.Nav-Bar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 18px 10px;
+    /* margin-top: 4px; */
+}
+.Nav-Bar h2{
+    color: black;
+    font-size: 35px;
+}
+.Nav-Bar span{
+    color: #2353cb;
+}
+.section{
+    width:50%;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: #fff; */
+    align-items: center;
+}
+.section a{
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px;
+    margin: 4px;
+    /* background-color: aqua; */
+    border-radius: 8px;
+    color: #E2E8F0;
+    transition: all 0.9s;
+}
+.link:hover{
+    color: #1c57ed;
+    transform: scale(1.1);
+}
+.resume{
+    width: 15%;
+    text-align: center;
+}
+.Cv{
+    font-weight: 700;
+    padding: 10px 45px;
+    margin-top: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.8s ease ;
+    background-color: #2353cb;
+    color: #fff;
+    border: 1px solid  transparent;
+}
+.Cv:hover{
+    border-color: #2353cb;
+    outline: none;
+    background-color: transparent;
+    color: #2353cb;
+    /* font-size: 19px; */
+}
+
+/* ****************** End of the Nav Bar ********************* */
+/* *********************************************************** */
+
+/* *******************  Title and sub Title ****************** */
+.line{
+    width: 95%;
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.line0{
+    width: 98%;
+    margin: auto;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.Head-Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    margin-left: 18px;
+    margin-top: 80px;
+    color: #000;
+    line-height: 2.5;
+}
+.Head-Title h2{
+    font-size: 50px;
+    
+}
+.Head-Title h4{
+    font-size: 35px;
+    /* margin-left: 8px; */
+    /* line-height: 1.9; */
+}
+.Head-Title span{
+    background: linear-gradient(to right, #2353cb, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Head-Title p{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+/* ****************End TItle And Sub Title**************** */
+.Skills{
+    margin-left:30px ;
+    font-size: 60px;
+    margin:30px ;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    /* background-color: aqua; */ 
+}
+.container img{
+    width: 60px;      
+    height: 60px;     
+    object-fit: contain; 
+    margin-bottom: 15px;
+    
+}
+.container div{
+    transition: all 0.6s;
+}
+.container div:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* الحاوية الأساسية للمشاريع */
+.container_ {
+    display: flex;
+    flex-wrap: wrap; /* ده الراب اللي سألت عليه عشان العناصر تنزل تحت بعضها لو المساحة صغرت */
+    justify-content: center;
+    gap: 80px; /* مسافة بين كل مشروع والتاني */
+    padding: 0 0 50px 0;
+}
+.hr{
+    font-size: 60px;
+    margin:30px ;
+}
+
+.Proj {
+    flex: 1 1 3000px; /* بيخلي كل مشروع ياخد عرض 300px ويفرش لو فيه مساحة */
+    max-width: 500px;
+    text-align: center;
+     /* للحصول على صندوقين جنبًا إلى جنب، نستخدم flex-basis بنسبة 48% (مع gap) */
+    flex-basis: 30%;
+    /* flex-grow و flex-shrink لضمان المرونة */
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 8px;
+    padding: 10px 5px;
+    margin-bottom:30px ;
+}.Proj:hover{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* صندوق الصورة */
+.image-box {
+    position: relative; /* مهم جداً عشان الـ overlay يترص جواه */
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+
+/* طبقة الهوفر (لوجو GitHub) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 83, 203, 0.7); /* اللون الأزرق بتاعك بفلتر شفاف */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* مختفي في البداية */
+    transition: opacity 0.4s ease;
+}
+
+.overlay i {
+    font-size: 50px;
+    color: white;
+}
+
+/* تأثير الهوفر */
+.Proj:hover .overlay {
+    opacity: 1; /* يظهر الطبقة الزرقاء والأيقونة */
+}
+
+.Proj:hover img {
+    transform: scale(1.1); /* تكبير بسيط للصورة زي ما عملت في الـ Skills */
+}
+
+.Proj p {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.Contact{
+    text-align: center;
+}
+.Contact h2{
+    margin-bottom: 20px;
+}
+.form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto 300px auto;
+    border: 2px solid #000;
+    padding: 20px; /* زود البادينج شوية عشان الفورم تتنفس */
+
+}
+#vv{
+    border-radius: 8px;
+    height: 85px;
+}
+.btn{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #2353cb;
+    border: 1px solid  transparent;
+    transition: all 0.5s;
+}
+.btn:hover{
+    border-color: #2353cb;
+    background-color: transparent;
+    cursor: pointer;
+    color: #2353cb;
+}
+
+.form1 label {
+    margin-bottom: 5px; /* مسافة بسيطة بين الكلمة والمربع */
+    font-weight: bold;
+}
+
+.form1 input {
+    width: 70%;
+    padding: 10px; /* البادينج الداخلي بيخلي الكتابة مريحة */
+    margin-bottom: 20px; /* مسافة بين كل حقل والتاني */
+    border-radius: 8px;
+    border: 1px solid #ccc; /* فريم خفيف للمربع */
+}
+.text{
+    width: 70%;
+    margin-bottom: 20px;
+}
+footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    overflow: hidden; /* يقص أي حاجة تخرج بره حدود الفوتر */
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    bottom: -69px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150vw; /* عرض أكبر من الشاشة لتأثير الموجة */
+    height: 480px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+.Sc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* حل مشكلة الأيقونات الفيرتكل */
+ul {
+    display: flex !important; /* يجبر العناصر تيجي جنب بعض */
+    flex-direction: row !important;
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.socials {
+    gap: 15px;
+}
+
+.socials a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    background: #2353cb;
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: rgba(13, 1, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.links {
+    gap: 20px;
+}
+
+.links a {
+    color: #2353cb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.legal {
+    font-size: 12px;
+    color: #a2b6e1;
+    margin-top: 10px;
+}
